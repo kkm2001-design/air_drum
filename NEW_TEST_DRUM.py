@@ -41,6 +41,7 @@ MASK_WIN = "Mask View"
 CTRL_WIN_A = "Settings Left (A)"
 CTRL_WIN_B = "Settings Right (B)"
 
+
 # ===== 1) 오디오 초기화 =====
 use_audio = True
 try:
@@ -51,11 +52,13 @@ except Exception as e:
     use_audio = False
 
 BASE = os.path.dirname(__file__)
+SAVE_DIR = os.path.join(BASE, "sounds")
+
 SOUNDS = {
-    "TL": os.path.join(BASE, "hihat.wav"),
-    "TR": os.path.join(BASE, "snare.wav"),
-    "BL": os.path.join(BASE, "tom.wav"),
-    "BR": os.path.join(BASE, "kick.wav"),
+    "TL": os.path.join(SAVE_DIR, "hihat.wav"),
+    "TR": os.path.join(SAVE_DIR, "snare.wav"),
+    "BL": os.path.join(SAVE_DIR, "tom.wav"),
+    "BR": os.path.join(SAVE_DIR, "kick.wav"),
 }
 
 if use_audio:
@@ -68,10 +71,10 @@ if use_audio:
             WAVS[k] = None
 
 SOUNDS_HIGHER = {
-    "TL": os.path.join(BASE, "hihat_higher.wav"),
-    "TR": os.path.join(BASE, "snare_higher.wav"),
-    "BL": os.path.join(BASE, "tom_higher.wav"),
-    "BR": os.path.join(BASE, "kick_higher.wav"),
+    "TL": os.path.join(SAVE_DIR, "hihat_higher.wav"),
+    "TR": os.path.join(SAVE_DIR, "snare_higher.wav"),
+    "BL": os.path.join(SAVE_DIR, "tom_higher.wav"),
+    "BR": os.path.join(SAVE_DIR, "kick_higher.wav"),
     }
 
 if use_audio:
